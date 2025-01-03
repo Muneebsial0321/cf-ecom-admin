@@ -1,6 +1,7 @@
 
 import { Button, TextField } from "@mui/material"
 import { useState } from "react"
+import { createProduct } from "../../_api/products"
 
 
 const cap = (str) => str.charAt(0).toUpperCase() + str.slice(1)
@@ -75,7 +76,8 @@ const CreateProduct = () => {
         )
         const data = await res.json()
         console.log({ data })
-        // createProduct(formData);
+
+        // await createProduct(formData);
     };
 
 
@@ -88,7 +90,7 @@ const CreateProduct = () => {
 
 
     return (
-        <div className="flex h-[100vh] w-[100vw] flex-col bg-orange-100 justify-center items-center">
+        <div className="flex py-[10rem] w-[100vw] flex-col bg-orange-100 justify-center items-center">
             {_data.map((e, i) => (
 
                 <TextField
@@ -110,7 +112,7 @@ const CreateProduct = () => {
 
             <Button
                 onClick={__submit__}
-                className="btn w-[19rem] text-white mt-2" >Submit</Button>
+                className="bg-black w-[19rem] text-white mt-2" >Submit</Button>
         </div>
     )
 }

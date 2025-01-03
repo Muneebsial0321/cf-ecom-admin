@@ -17,6 +17,7 @@ const _pages = [
     { name: "Login", href: "/auth/login" },
     { name: "Signup", href: "/auth/signup" },
     { name: "Products", href: "/products/somthing" },
+    { name: "Create Products", href: "/products" },
 ]
 
 function NavBar() {
