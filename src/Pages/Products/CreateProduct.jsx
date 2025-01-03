@@ -61,23 +61,7 @@ const CreateProduct = () => {
             });
 
         }
-
-        // // Log to verify
-        // for (const pair of formData.entries()) {
-        //     console.log(pair[0], pair[1]);
-        // }
-
-        // Make the API call with form data
-        const res = await fetch('http://localhost:5000/products', {
-            method: "POST",
-            body: formData
-        }
-
-        )
-        const data = await res.json()
-        console.log({ data })
-
-        // await createProduct(formData);
+        await createProduct(formData);
     };
 
 

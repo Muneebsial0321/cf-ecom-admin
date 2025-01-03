@@ -1,13 +1,18 @@
 import axios from "./axios.config"
 
 const createProduct = async (payload) => {
-    const req = await axios.post('/products', payload)
-    console.log({ data: req.data })
-    return req.data
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/products`, {
+        method: "POST",
+        body: payload
+    }
+    )
+    const data = await res.json()
+    console.log({ data })
+    return data
 
 }
-const updateProduct = async (id,payload) => {
-    const req = await axios.post(`/products/${id}`,payload)
+const updateProduct = async (id, payload) => {
+    const req = await axios.post(`/products/${id}`, payload)
     console.log({ data: req.data })
     return req.data
 }
