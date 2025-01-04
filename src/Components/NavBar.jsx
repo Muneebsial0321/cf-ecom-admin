@@ -37,8 +37,9 @@ function NavBar() {
 
     return (
         <AppBar
+            position="static"
             className='bg-black text-white'
-            position="fixed">
+            >
             <Container>
                 <Toolbar disableGutters>
 
