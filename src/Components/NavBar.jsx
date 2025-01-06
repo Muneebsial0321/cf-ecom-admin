@@ -18,6 +18,8 @@ const _pages = [
     { name: "Signup", href: "/auth/signup" },
     { name: "Products", href: "/products/somthing" },
     { name: "Create Products", href: "/products" },
+    { name: "Orders", href: "/order" },
+    { name: "Orders List", href: "/orderlist" },
 ]
 
 function NavBar() {
